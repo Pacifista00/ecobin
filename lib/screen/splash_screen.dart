@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // Tunggu 5 detik lalu pindah ke TooltipsScreen
     Future.delayed(const Duration(seconds: 5), () {
       if (mounted) {
-        Navigator.pushReplacementNamed(context, '/login');
+        Navigator.pushReplacementNamed(context, '/onboard');
       }
     });
   }
@@ -24,14 +24,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF8AA624),
+      backgroundColor: const Color(0xFF98CD00),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Logo aplikasi
             Image.asset(
-              'assets/images/logo.png', // ganti dengan logo kamu
+              'assets/images/logowhite.png', // ganti dengan logo kamu
               width: 86,
               height: 86,
             ),

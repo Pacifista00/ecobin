@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class LoginPage extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            // Decorative elements (assuming these are similar to the onboard screen)
+            // Decorative shapes
             Positioned(
               top: 0,
               right: 0,
@@ -33,33 +33,20 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const SizedBox(height: 180),
-                  // Title "Login"
+                  const SizedBox(height: 150),
+
+                  // Greeting and description
                   const Text(
-                    "Login",
-                    textAlign: TextAlign.center,
+                    "Yuk, Buat Akun!",
                     style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
                       color: Colors.black87,
                     ),
                   ),
-                  const SizedBox(height: 20),
-
-                  // Greeting and description
-                  // const Text(
-                  //   "Halo, Ayo Mulai!",
-                  //   textAlign: TextAlign.center,
-                  //   style: TextStyle(
-                  //     fontSize: 24,
-                  //     fontWeight: FontWeight.w700,
-                  //     color: Colors.black87,
-                  //   ),
-                  // ),
                   const SizedBox(height: 8),
                   const Text(
-                    "Masuk dan temukan cara baru menjaga kebersihan dengan tempat sampah pintar.",
-                    textAlign: TextAlign.center,
+                    "Daftarkan akunmu untuk mulai memantau dan menjaga kebersihan lingkungan sekolah.",
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.black54,
@@ -68,8 +55,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 40),
 
-                  // Email input field
-                  // Email input field
+                  // Username input field
                   Container(
                     height: 56,
                     decoration: BoxDecoration(
@@ -83,8 +69,30 @@ class LoginPage extends StatelessWidget {
                           horizontal: 28,
                           vertical: 20,
                         ),
-                        hintText: "Username atau Email", // Placeholder text
-                        prefixIcon: Icon(Icons.person), // Icon untuk username
+                        hintText: "Username",
+                        prefixIcon: Icon(Icons.person, color: Colors.black54),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+
+                  // Email input field
+                  Container(
+                    height: 56,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF0F0F0),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: const TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        contentPadding: EdgeInsets.symmetric(
+                          horizontal: 28,
+                          vertical: 20,
+                        ),
+                        hintText: "Email",
+                        prefixIcon: Icon(Icons.email, color: Colors.black54),
                       ),
                     ),
                   ),
@@ -105,32 +113,37 @@ class LoginPage extends StatelessWidget {
                           horizontal: 28,
                           vertical: 20,
                         ),
-                        hintText: "Password", // Placeholder text
-                        prefixIcon: Icon(Icons.lock), // Icon untuk password
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-
-                  // Forgot Password text
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: TextButton(
-                      onPressed: () {
-                        // Handle forgot password tap
-                      },
-                      child: const Text(
-                        "Lupa Password?",
-                        style: TextStyle(fontSize: 14, color: Colors.black54),
+                        hintText: "Password",
+                        prefixIcon: Icon(Icons.lock, color: Colors.black54),
                       ),
                     ),
                   ),
                   const SizedBox(height: 20),
+                  Container(
+                    height: 56,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF0F0F0),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: const TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        contentPadding: EdgeInsets.symmetric(
+                          horizontal: 28,
+                          vertical: 20,
+                        ),
+                        hintText: "Confirm Password",
+                        prefixIcon: Icon(Icons.lock, color: Colors.black54),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 40),
 
-                  // Login button
+                  // Register button
                   ElevatedButton(
                     onPressed: () {
-                      // Handle login button tap
+                      // Action for register button
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF98CD00),
@@ -141,7 +154,7 @@ class LoginPage extends StatelessWidget {
                       elevation: 0,
                     ),
                     child: const Text(
-                      "Login",
+                      "Daftar",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -150,52 +163,20 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 12),
+
+                  // "Sudah punya akun? Login" text
                   Align(
                     alignment: Alignment.center,
                     child: TextButton(
                       onPressed: () {
-                        Navigator.pushReplacementNamed(context, '/register');
+                        Navigator.pushReplacementNamed(
+                          context,
+                          '/login',
+                        ); // Go back to the login page
                       },
                       child: const Text(
-                        "Belum mempunyai akun? Daftar",
+                        "Sudah punya akun? Login",
                         style: TextStyle(fontSize: 14, color: Colors.black54),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-                  Row(
-                    children: [
-                      const Expanded(child: Divider(color: Colors.black26)),
-                      const SizedBox(width: 10),
-                      Text(
-                        "atau",
-                        style: TextStyle(fontSize: 14, color: Colors.black54),
-                      ),
-                      const SizedBox(width: 10),
-                      const Expanded(child: Divider(color: Colors.black26)),
-                    ],
-                  ),
-                  const SizedBox(height: 16),
-
-                  // Alternative login button (e.g., Google or other)
-                  ElevatedButton(
-                    onPressed: () {
-                      // Handle alternative login
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFF0F0F0),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      elevation: 0,
-                    ),
-                    child: const Text(
-                      "Google", // Placeholder text
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black54,
                       ),
                     ),
                   ),

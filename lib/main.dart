@@ -1,6 +1,7 @@
 import 'package:ecobin/screen/login.dart';
+import 'package:ecobin/screen/register.dart';
 import 'package:ecobin/screen/splash_screen.dart';
-import 'package:ecobin/screen/tooltips.screen.dart';
+import 'package:ecobin/screen/onboard.screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,8 +19,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
-        '/tooltips': (context) => const TooltipsScreen(),
+        '/onboard': (context) => const OnboardScreen(),
         '/login': (context) => const LoginPage(),
+        '/register': (context) => const RegisterPage(),
       },
     );
   }
