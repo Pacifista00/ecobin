@@ -33,7 +33,7 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const SizedBox(height: 180),
+                  const SizedBox(height: 120),
                   // Title "Login"
                   const Text(
                     "Login",
@@ -44,7 +44,7 @@ class LoginPage extends StatelessWidget {
                       color: Colors.black87,
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 12),
 
                   // Greeting and description
                   // const Text(
@@ -88,7 +88,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 12),
 
                   // Password input field
                   Container(
@@ -125,12 +125,13 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
 
                   // Login button
                   ElevatedButton(
                     onPressed: () {
-                      // Handle login button tap
+                      // Pindah ke /home dan hapus halaman login dari stack
+                      Navigator.pushReplacementNamed(context, '/home');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF98CD00),
@@ -149,7 +150,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 6),
                   Align(
                     alignment: Alignment.center,
                     child: TextButton(
@@ -162,7 +163,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 10),
                   Row(
                     children: [
                       const Expanded(child: Divider(color: Colors.black26)),

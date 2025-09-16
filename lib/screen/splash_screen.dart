@@ -13,7 +13,6 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    // Tunggu 5 detik lalu pindah ke TooltipsScreen
     Future.delayed(const Duration(seconds: 5), () {
       if (mounted) {
         Navigator.pushReplacementNamed(context, '/onboard');
@@ -30,11 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Logo aplikasi
-            Image.asset(
-              'assets/images/logowhite.png', // ganti dengan logo kamu
-              width: 86,
-              height: 86,
-            ),
+            Image.asset('assets/images/logowhite.png', width: 86, height: 86),
             const SizedBox(height: 36),
 
             // Loading animasi unik

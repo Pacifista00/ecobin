@@ -33,7 +33,7 @@ class RegisterPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const SizedBox(height: 150),
+                  const SizedBox(height: 120),
 
                   // Greeting and description
                   const Text(
@@ -74,7 +74,7 @@ class RegisterPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 12),
 
                   // Email input field
                   Container(
@@ -96,7 +96,7 @@ class RegisterPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 12),
 
                   // Password input field
                   Container(
@@ -118,7 +118,7 @@ class RegisterPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 12),
                   Container(
                     height: 56,
                     decoration: BoxDecoration(
@@ -138,7 +138,7 @@ class RegisterPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 20),
 
                   // Register button
                   ElevatedButton(
@@ -162,7 +162,7 @@ class RegisterPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 10),
 
                   // "Sudah punya akun? Login" text
                   Align(
