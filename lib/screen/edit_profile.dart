@@ -84,7 +84,6 @@ class EditProfilePage extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () {
-                // TODO: Simpan perubahan profil (nama & email saja)
                 Navigator.pop(context);
               },
               style: ElevatedButton.styleFrom(

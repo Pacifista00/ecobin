@@ -54,7 +54,7 @@ class AccountPage extends StatelessWidget {
                         shape: BoxShape.circle,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.15),
+                            color: Colors.black.withAlpha(38),
                             blurRadius: 8,
                             offset: const Offset(0, 4),
                           ),
@@ -135,7 +135,6 @@ class AccountPage extends StatelessWidget {
                       style: TextStyle(color: Colors.red),
                     ),
                     onTap: () {
-                      // TODO: Tambahkan logika logout
                       Navigator.pushReplacementNamed(context, '/login');
                     },
                   ),

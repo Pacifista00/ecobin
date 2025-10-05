@@ -72,7 +72,7 @@ class NotificationPage extends StatelessWidget {
                     leading: Container(
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF98CD00).withOpacity(0.15),
+                        color: const Color(0xFF98CD00).withAlpha(38),
                         shape: BoxShape.circle,
                       ),
                       child: const Icon(
